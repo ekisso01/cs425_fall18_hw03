@@ -1,0 +1,136 @@
+/* Style the navbar */
+.navigationbar {
+  z-index: 1;
+  overflow: hidden;
+  background-color: #192d46;
+}
+
+body{
+ margin-left: 0;
+ margin-right: 0; 
+ background-color: #fff0 !important;
+ height: fit-content;
+  background-repeat: no-repeat;
+}
+
+.navigationbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+/* Navbar links */
+.navigationbar a:hover {
+  text-decoration: none;
+}
+
+.backToTop {
+ overflow: hidden;
+ z-index: 1;
+}
+
+.backToTop a {
+ 
+    display: block;
+    position: fixed;
+    bottom: 20px; /* Place the button at the bottom of the page */
+    left: 30px; /* Place the button 30px from the left */
+   
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #192c46;
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; 
+    border-radius: 10px; 
+    font-size: 18px;
+
+}
+
+.backToTop a:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+    text-decoration: none;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.stickyDown {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+
+
+
+.mediaIcons{
+ padding-top: 210px;
+ text-align: center;
+
+}
+
+.mediaIcons p{
+
+ font-size: 20px;
+ color: white;
+}
+
+.fa {
+    
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+    opacity: 0.7;
+    text-decoration:none;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+footer{
+ background-image: url("../images/blue.png");
+ height: 300px;
+ background-size: cover;
+ position: fixed;
+ left: 0;
+ bottom: 0;
+ width: 100%;
+}
+
+html{
+ background-image: linear-gradient(#2d4f7e,#000000);
+ height:100%;
+}
