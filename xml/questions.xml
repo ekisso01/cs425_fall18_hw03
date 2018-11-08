@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<!DOCTYPE quiz [
+	<!ELEMENT quiz (title, items)>
+	<!ELEMENT title (#PCDATA)>
+	<!ELEMENT items (item)+>	
+	<!ELEMENT item (question, answer, answer+)>
+	<!ELEMENT question (#PCDATA)>
+	<!ELEMENT answer (#PCDATA)>
+	<!ATTLIST answer correct (y) #IMPLIED>
+]>
+
+<quiz>
+  <title>The Quiz</title>
+    <items>
+
+	<item>
+        	<question>Who was the king that was killed by his brother(The Lion King)?</question>
+        	<answer correct="y">Mufasa</answer>
+        	<answer>Jafar</answer>
+        	<answer>Jack</answer>
+        	<answer>Pacha</answer>
+	</item>
+	<item>
+        	<question>The companion of Robin Hood?</question>
+        	<answer> Timon</answer>
+        	<answer correct="y">Little John</answer>
+        	<answer>Marahute</answer>
+        	<answer>Pumba</answer>
+	</item>
+	<item>
+        	<question>The companion of Robin Hood?</question>
+        	<answer> Timon</answer>
+        	<answer correct="y">Little John</answer>
+        	<answer>Marahute</answer>
+        	<answer>Pumba</answer>
+	</item>
+	<item>
+        	<question>The main antagonist who is the leader of the Underworld(Hercules)?</question>
+        	<answer> Timon</answer>
+        	<answer correct="y">Hades</answer>
+        	<answer>Triton</answer>
+        	<answer>Nemo</answer>
+	</item>
+	<item>
+        	<question>Moscow is capital of which country?</question>
+        	<answer>Sweden</answer>
+        	<answer correct="y">Russia</answer>
+        	<answer>Germany</answer>
+        	<answer>Italy</answer>
+	</item>
+	<item>
+        	<question>Berlin is capital of which country?</question>
+        	<answer>Sweden</answer>
+        	<answer correct="y">Germany</answer>
+        	<answer>Russia</answer>
+        	<answer>Greece</answer>
+	</item>
+	<item>
+        	<question>Baghdad is capital of which country?</question>
+        	<answer>India</answer>
+        	<answer correct="y">Iraq</answer>
+        	<answer>Spain</answer>
+        	<answer>Cuba</answer>
+	</item>
+	<item>
+        	<question>Stockholm is capital of which country?</question>
+        	<answer>India</answer>
+        	<answer correct="y">Sweden</answer>
+        	<answer>Spain</answer>
+        	<answer>Cuba</answer>
+	</item>
+	<item>
+        	<question>Seoul is capital of which country?</question>
+        	<answer>Iraq</answer>
+        	<answer correct="y">South Korea</answer>
+        	<answer>United Kingdom</answer>
+        	<answer>Cuba</answer>
+	</item>
+	<item>
+        	<question>Cairo is capital of which country?</question>
+        	<answer>Italy</answer>
+        	<answer correct="y">Egypt</answer>
+        	<answer>Cuba</answer>
+        	<answer>Spain</answer>
+	</item>
+	<item>
+        	<question>Euro Disney can be found in which location?</question>
+        	<answer>Hamburg</answer>
+        	<answer correct="y">Paris</answer>
+        	<answer>London</answer>
+        	<answer>Rome</answer>
+	</item>
+	<item>
+        	<question>Mount Rushmore can be found in which location?</question>
+        	<answer>California</answer>
+        	<answer correct="y">South Dakota</answer>
+        	<answer>Georgia</answer>
+        	<answer>Montana</answer>
+	</item>
+	<item>
+        	<question>Notre Dame can be found in which location?</question>
+        	<answer>Vienna</answer>
+        	<answer correct="y">Paris</answer>
+        	<answer>Rome</answer>
+        	<answer>Athens</answer>
+	</item>
+	<item>
+        	<question>Tower Bridge can be found in which location?</question>
+        	<answer>Florence</answer>
+        	<answer correct="y">London</answer>
+        	<answer>Dublin</answer>
+        	<answer>Berlin</answer>
+	</item>
+	<item>
+        	<question>Alcatraz can be found in which location?</question>
+        	<answer>Denver</answer>
+        	<answer correct="y">San Francisco</answer>
+        	<answer>Seattle</answer>
+        	<answer>Atlanta</answer>
+	</item>
+	<item>
+        	<question>Big Ben can be found in which location?</question>
+        	<answer>New York</answer>
+        	<answer correct="y">London</answer>
+        	<answer>Stockholm</answer>
+        	<answer>Baghdad</answer>
+	</item>
+	<item>
+        	<question>The Vatican can be found in which location?</question>
+        	<answer>Paris</answer>
+        	<answer correct="y">Rome</answer>
+        	<answer>London</answer>
+        	<answer>Madrid</answer>
+	</item>
+	<item>
+        	<question>Trafalgar Square can be found in which location?</question>
+        	<answer>Toronto</answer>
+        	<answer correct="y">London</answer>
+        	<answer>Seattle</answer>
+        	<answer>Sydney</answer>
+	</item>
+	<item>
+        	<question>The US Capitol can be found in which location?</question>
+        	<answer>Denver</answer>
+        	<answer correct="y">Washington D.C</answer>
+        	<answer>New York</answer>
+        	<answer>Atlanta</answer>
+	</item>
+	<item>
+        	<question>Los Alamos can be found in which location?</question>
+        	<answer>Arizona</answer>
+        	<answer correct="y">New Mexico</answer>
+        	<answer>Nevada</answer>
+        	<answer>Texas</answer>
+	</item>
+	<item>
+        	<question>Palazzo Vecchio can be found in which location?</question>
+        	<answer>Rome</answer>
+        	<answer correct="y">Florence</answer>
+        	<answer>Naples</answer>
+        	<answer>Milan</answer>
+	</item>
+	<item>
+        	<question>Saint Issac's Cathedral can be found in which location?</question>
+        	<answer>Minsk</answer>
+        	<answer correct="y">Saint Petersburg</answer>
+        	<answer>Kiev</answer>
+        	<answer>Moscow</answer>
+	</item>
+	<item>
+        	<question>La Scala can be found in which location?</question>
+        	<answer>Naples</answer>
+        	<answer correct="y">Milan</answer>
+        	<answer>Rome</answer>
+        	<answer>Venice</answer>
+	</item>
+
+</items>
+</quiz>

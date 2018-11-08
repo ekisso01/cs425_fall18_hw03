@@ -1,3 +1,6 @@
+<?php
+ session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,15 +35,102 @@
 	
 	
 	<?php
+	if(isset($_POST["nextButton"])){
+		$_SESSION["questioncount"]=$_SESSION["questioncount"]+1;
+	 }
+	 else if(isset($_POST["startButton"]) or isset($_POST["returnButton"]) ) {
+		$_SESSION["questioncount"]=1;
+	 }
 	
-	if(isset($_POST["startButton"])){
-	
+	if((isset($_POST["startButton"]) or isset($_POST["nextButton"])) and $_SESSION["questioncount"]<11){
+	 
+	 
 	?>
-		<table class="questionTable">
-			<tr><td><button type="button" class="btn btn-info" name="nextButton">Next</button></td></tr>
-		</table>
+	<!-- to be tranfered to the page of the actual game -->
+	<form method="post" class="QuestionForm">
+	   <div>
+           <label name="numQuestions" id="numQuestions"><?= $_SESSION["questioncount"]."/10" ?> </label>
+	   
+	   <button type="submit" class="close" aria-label="Close" name="closeButton">
+  		<span aria-hidden="true">&times;</span>
+	   </button><br><br><br>
+	   </div>
+	   <label for="question" id="questionlbl">this is where the question is</label><br>
+	   <table class="answersTable">
+		<tr><td>
+		<input type="radio" name="answers" id="ansA" value="A">
+		<label for="ansA"> Ajdhajhadjdaj</label>
+		</td>
+		<td>
+		<input type="radio" name="answers" id="ansB" value="B">
+		<label for="ansB"> Bdjgfdhfds jkhgjsdhgs</label>
+		</td>
+		</tr>
+		<tr><td>
+		<input type="radio" name="answers" id="ansC" value="C">
+		<label for="ansC"> Cadfadgfdsa</label>
+		</td>
+		<td>
+		<input type="radio" name="answers" id="ansD" value="D">
+		<label for="ansD"> Dfgsgfs</label>
+		</td>
+		</tr>
+	   </table>
+		<div id="nextBtn">
+		
+		<button type="submit" class="btn btn-info" name="nextButton">
+		<!-- To check if the button should say next or finish -->
+		<?php
+			if($_SESSION["questioncount"]==10){
+		?>
+		Finish
+		<?php
+			}else{
+		?>
+		Next
+		<?php
+			}
+		?>
+		</button>
+		
+		</div>
+	</form>
+	<!-- to be transfer to the page of the current score --> 
 	<?php 
-		}else{
+		}else if($_SESSION["questioncount"]>10){
+
+	?>
+	<form class="quizScoreForm" method="post">
+	  
+	  
+
+	  <table class="buttons">
+		<tr><td>
+		<label id="generallbl">Your score :</label>
+		</td>
+		<td>
+		<input type="text" name="score" id="generaltxt">
+		</td>
+		<tr><td>
+		<label id="generallbl">Nickname :</label>
+		</td>
+		<td>
+		<input type="text" name="nickname" id="generaltxt" placeholder=" Your nickname..">
+		</td>
+		</tr>
+		<tr><td>
+		<button type="submit" class="btn btn-info" name="SaveButton" id="savebtn">Save your score</button>
+		</td>
+		<td>
+		<button type="submit" class="btn btn-info" name="returnButton" id="returnbtn">Return</button>
+		</td>
+		</tr>
+	  </table>
+	</form>
+	<!--to be tranfered to the start page -->
+	<?php 
+		
+	}else if (isset($_POST["returnButton"]) or isset($_POST["closeButton"]) or !isset($_SESSION["questioncount"])){
 	
 	?>
 	<div class="mainContent">

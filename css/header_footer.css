@@ -8,7 +8,7 @@
 body{
  margin-left: 0;
  margin-right: 0; 
- background-color: #fff0 !important;
+ background-color: transparent !important;
  height: fit-content;
   background-repeat: no-repeat;
 }
@@ -131,6 +131,8 @@ footer{
 }
 
 html{
- background-image: linear-gradient(#2d4f7e,#000000);
  height:100%;
+ background-color: blue; /* For browsers that do not support gradients */
+ background-image: linear-gradient(#2d4f7e,#000000);
+ 
 }
