@@ -16,7 +16,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href='https://fonts.googleapis.com/css?family=Content' rel='stylesheet'>
 	<link rel="stylesheet" type="text/css" href="css/header_footer.css">
-        <link rel="stylesheet" type="text/css" href="css/homePage.css">
+    <link rel="stylesheet" type="text/css" href="css/homePage.css">
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	</head>
 
@@ -55,27 +55,49 @@
   		<span aria-hidden="true">&times;</span>
 	   </button><br><br><br>
 	   </div>
-	   <label for="question" id="questionlbl">this is where the question is</label><br>
+	   <?php
+			if (file_exists('xml/questionsXML.xml')) {
+			$xml = simplexml_load_file('xml/questionsXML.xml');
+			
+		?>
+	   <label for="question" id="questionlbl">
+	   <?php 
+	   echo $xml->item[0]->question. "<br>";
+	   ?> </label><br>
 	   <table class="answersTable">
 		<tr><td>
 		<input type="radio" name="answers" id="ansA" value="A">
-		<label for="ansA"> Ajdhajhadjdaj</label>
+		<label for="ansA">
+		<?php 
+		echo $xml->item[0]->answer[0]; 
+		?> </label>
 		</td>
 		<td>
 		<input type="radio" name="answers" id="ansB" value="B">
-		<label for="ansB"> Bdjgfdhfds jkhgjsdhgs</label>
+		<label for="ansB">
+		<?php 
+		echo $xml->item[0]->answer[1]; 
+		?> </label>
 		</td>
 		</tr>
 		<tr><td>
 		<input type="radio" name="answers" id="ansC" value="C">
-		<label for="ansC"> Cadfadgfdsa</label>
+		<label for="ansC"> 
+		<?php 
+		echo $xml->item[0]->answer[2]; 
+		?></label>
 		</td>
 		<td>
 		<input type="radio" name="answers" id="ansD" value="D">
-		<label for="ansD"> Dfgsgfs</label>
+		<label for="ansD">
+		<?php 
+		echo $xml->item[0]->answer[3]; 
+			
+			?></label>
 		</td>
 		</tr>
 	   </table>
+	   
 		<div id="nextBtn">
 		
 		<button type="submit" class="btn btn-info" name="nextButton">
@@ -92,9 +114,18 @@
 			}
 		?>
 		</button>
+		<?php
+			
+			
+			}else {
+				exit('Failed to open test.xml.');
+			}
 		
+	
+		?>
 		</div>
 	</form>
+	
 	<!-- to be transfer to the page of the current score --> 
 	<?php 
 		}else if($_SESSION["questioncount"]>10){
