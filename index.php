@@ -56,44 +56,77 @@
 	   </button><br><br><br>
 	   </div>
 	   <?php
+			
 			if (file_exists('xml/questionsXML.xml')) {
 			$xml = simplexml_load_file('xml/questionsXML.xml');
+			if ($_SESSION["questioncount"] == 1){
+				$level=" M ";
+			}
+			else if (strcmp($_POST["answers"],$xml->item[$_SESSION["prevQuestion"]]->correct) == 0 and strcmp($xml->item[$_SESSION["prevQuestion"]]->level, " E ")==0){
+				
+				$level=" M ";
+			}
+			else if (strcmp($_POST["answers"],$xml->item[$_SESSION["prevQuestion"]]->correct) != 0 and strcmp($xml->item[$_SESSION["prevQuestion"]]->level, " E ")==0){
+				
+				$level=" E ";
+			}
+			else if (strcmp($_POST["answers"],$xml->item[$_SESSION["prevQuestion"]]->correct) == 0 and strcmp($xml->item[$_SESSION["prevQuestion"]]->level, " M ")==0){
+				
+				$level=" D ";
+			}
+			else if (strcmp($_POST["answers"],$xml->item[$_SESSION["prevQuestion"]]->correct) != 0 and strcmp($xml->item[$_SESSION["prevQuestion"]]->level, " M ")==0){
+				
+				$level=" E ";
+			}
+			else if (strcmp($_POST["answers"],$xml->item[$_SESSION["prevQuestion"]]->correct) == 0 and strcmp($xml->item[$_SESSION["prevQuestion"]]->level, " D ")==0){
+				
+				$level=" D ";
+			}
+			else if (strcmp($_POST["answers"],$xml->item[$_SESSION["prevQuestion"]]->correct) !=0 and strcmp($xml->item[$_SESSION["prevQuestion"]]->level , " D ")==0){	
+				
+				$level=" M ";
+			}
+						
+			$i=rand(0,80);
+			while ($xml->item[$i]->level != $level){
+				$i=rand(0,80);
+			}
+			$_SESSION["prevQuestion"]=$i;
 			
 		?>
 	   <label for="question" id="questionlbl">
 	   <?php 
-	   echo $xml->item[0]->question. "<br>";
+	   echo $xml->item[$i]->question. "<br>";
 	   ?> </label><br>
 	   <table class="answersTable">
 		<tr><td>
-		<input type="radio" name="answers" id="ansA" value="A">
+		<input type="radio" name="answers" id="ansA" value="<?php echo $xml->item[$i]->answer[0]; ?>" checked="checked">
 		<label for="ansA">
 		<?php 
-		echo $xml->item[0]->answer[0]; 
-		?> </label>
+		echo $xml->item[$i]->answer[0];
+		?></label>
 		</td>
 		<td>
-		<input type="radio" name="answers" id="ansB" value="B">
+		<input type="radio" name="answers" id="ansB" value="<?php echo $xml->item[$i]->answer[1]; ?>">
 		<label for="ansB">
 		<?php 
-		echo $xml->item[0]->answer[1]; 
+		echo $xml->item[$i]->answer[1]; 
 		?> </label>
 		</td>
 		</tr>
 		<tr><td>
-		<input type="radio" name="answers" id="ansC" value="C">
+		<input type="radio" name="answers" id="ansC" value="<?php echo $xml->item[$i]->answer[2]; ?>">
 		<label for="ansC"> 
 		<?php 
-		echo $xml->item[0]->answer[2]; 
+		echo $xml->item[$i]->answer[2]; 
 		?></label>
 		</td>
 		<td>
-		<input type="radio" name="answers" id="ansD" value="D">
+		<input type="radio" name="answers" id="ansD" value="<?php echo $xml->item[$i]->answer[3]; ?>">
 		<label for="ansD">
 		<?php 
-		echo $xml->item[0]->answer[3]; 
-			
-			?></label>
+		echo $xml->item[$i]->answer[3]; 
+		?></label>
 		</td>
 		</tr>
 	   </table>
@@ -161,8 +194,8 @@
 	<!--to be tranfered to the start page -->
 	<?php 
 		
-	}else if (isset($_POST["returnButton"]) or isset($_POST["closeButton"]) or !isset($_SESSION["questioncount"])){
-	
+	}else if (isset($_POST["returnButton"]) or isset($_POST["closeButton"]) or !isset($_SESSION["questioncount"]) or $_SERVER['REQUEST_METHOD'] === 'GET'){
+		session_unset();
 	?>
 	<div class="mainContent">
 	<div class="mainHeader">

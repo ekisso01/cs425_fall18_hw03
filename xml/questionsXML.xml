@@ -6,127 +6,163 @@
 	<!ELEMENT item (question, answer, answer+)>
 	<!ELEMENT question (#PCDATA)>
 	<!ELEMENT answer (#PCDATA)>
+	<!ELEMENT level (#PCDATA)>
+	<!ELEMENT correct (#PCDATA)>
 	<!ATTLIST answer correct (y) #IMPLIED>
 ]>
 <quiz>
 	<item>
         	<question>Who was the king that was killed by his brother(The Lion King)?</question>
-        	<answer correct="y">Mufasa</answer>
+        	<answer>Mufasa</answer>
         	<answer>Jafar</answer>
         	<answer>Jack</answer>
         	<answer>Pacha</answer>
+		<level> E </level>
+		<correct>Mufasa</correct>
 	</item>
 	<item>
         	<question>The companion of Robin Hood?</question>
         	<answer> Timon</answer>
-        	<answer correct="y">Little John</answer>
+        	<answer>Little John</answer>
         	<answer>Marahute</answer>
         	<answer>Pumba</answer>
+		<level> E </level>
+		<correct>Little John</correct>
 	</item>
 	<item>
-        	<question>The companion of Robin Hood?</question>
-        	<answer> Timon</answer>
-        	<answer correct="y">Little John</answer>
-        	<answer>Marahute</answer>
-        	<answer>Pumba</answer>
+        	<question>What is the name of the fairy in Peter Pan?</question>
+        	<answer>Tiana</answer>
+        	<answer>Ariel</answer>
+        	<answer>Bell</answer>
+        	<answer>Tinker Bell</answer>
+		<level> E </level>
+		<correct>Tinker Bell</correct>
 	</item>
 	<item>
         	<question>The main antagonist who is the leader of the Underworld(Hercules)?</question>
         	<answer> Timon</answer>
-        	<answer correct="y">Hades</answer>
+        	<answer>Hades</answer>
         	<answer>Triton</answer>
         	<answer>Nemo</answer>
+		<level> E </level>
+		<correct>Hades</correct>
 	</item>
 	<item>
         	<question>Moscow is capital of which country?</question>
         	<answer>Sweden</answer>
-        	<answer correct="y">Russia</answer>
+        	<answer>Russia</answer>
         	<answer>Germany</answer>
         	<answer>Italy</answer>
+		<level> E </level>
+		<correct>Russia</correct>
 	</item>
 	<item>
         	<question>Berlin is capital of which country?</question>
         	<answer>Sweden</answer>
-        	<answer correct="y">Germany</answer>
+        	<answer>Germany</answer>
         	<answer>Russia</answer>
         	<answer>Greece</answer>
+		<level> E </level>
+		<correct>Germany</correct>
 	</item>
 	<item>
         	<question>Baghdad is capital of which country?</question>
         	<answer>India</answer>
-        	<answer correct="y">Iraq</answer>
+        	<answer>Iraq</answer>
         	<answer>Spain</answer>
         	<answer>Cuba</answer>
+		<level> E </level>
+		<correct>Iraq</correct>
 	</item>
 	<item>
         	<question>Stockholm is capital of which country?</question>
         	<answer>India</answer>
-        	<answer correct="y">Sweden</answer>
+        	<answer>Sweden</answer>
         	<answer>Spain</answer>
         	<answer>Cuba</answer>
+		<level> E </level>
+		<correct>Sweden</correct>
 	</item>
 	<item>
         	<question>Seoul is capital of which country?</question>
         	<answer>Iraq</answer>
-        	<answer correct="y">South Korea</answer>
+        	<answer>South Korea</answer>
         	<answer>United Kingdom</answer>
         	<answer>Cuba</answer>
+		<level> E </level>
+		<correct>South Korea</correct>
 	</item>
 	<item>
         	<question>Cairo is capital of which country?</question>
         	<answer>Italy</answer>
-        	<answer correct="y">Egypt</answer>
+        	<answer>Egypt</answer>
         	<answer>Cuba</answer>
         	<answer>Spain</answer>
+		<level> E </level>
+		<correct>Egypt</correct>
 	</item>
 	<item>
         	<question>Euro Disney can be found in which location?</question>
         	<answer>Hamburg</answer>
-        	<answer correct="y">Paris</answer>
+        	<answer>Paris</answer>
         	<answer>London</answer>
         	<answer>Rome</answer>
+		<level> E </level>
+		<correct>Paris</correct>
 	</item>
 	<item>
         	<question>Mount Rushmore can be found in which location?</question>
         	<answer>California</answer>
-        	<answer correct="y">South Dakota</answer>
+        	<answer>South Dakota</answer>
         	<answer>Georgia</answer>
         	<answer>Montana</answer>
+		<level> E </level>
+		<correct>South Dakota</correct>
 	</item>
 	<item>
         	<question>Notre Dame can be found in which location?</question>
         	<answer>Vienna</answer>
-        	<answer correct="y">Paris</answer>
+        	<answer>Paris</answer>
         	<answer>Rome</answer>
         	<answer>Athens</answer>
+		<level> E </level>
+		<correct>Paris</correct>
 	</item>
 	<item>
         	<question>Tower Bridge can be found in which location?</question>
         	<answer>Florence</answer>
-        	<answer correct="y">London</answer>
+        	<answer>London</answer>
         	<answer>Dublin</answer>
         	<answer>Berlin</answer>
+		<level> E </level>
+		<correct>London</correct>
 	</item>
 	<item>
         	<question>Alcatraz can be found in which location?</question>
         	<answer>Denver</answer>
-        	<answer correct="y">San Francisco</answer>
+        	<answer>San Francisco</answer>
         	<answer>Seattle</answer>
         	<answer>Atlanta</answer>
+		<level> E </level>
+		<correct>San Francisco</correct>
 	</item>
 	<item>
         	<question>Big Ben can be found in which location?</question>
         	<answer>New York</answer>
-        	<answer correct="y">London</answer>
+        	<answer>London</answer>
         	<answer>Stockholm</answer>
         	<answer>Baghdad</answer>
+		<level> E </level>
+		<correct>London</correct>
 	</item>
 	<item>
         	<question>The Vatican can be found in which location?</question>
         	<answer>Paris</answer>
-        	<answer correct="y">Rome</answer>
+        	<answer>Rome</answer>
         	<answer>London</answer>
         	<answer>Madrid</answer>
+		<level> E </level>
+		<correct>Rome</correct>
 	</item>
 	<item>
         	<question>Trafalgar Square can be found in which location?</question>
@@ -134,55 +170,71 @@
         	<answer correct="y">London</answer>
         	<answer>Seattle</answer>
         	<answer>Sydney</answer>
+		<level> E </level>
+		<correct>London</correct>
 	</item>
 	<item>
         	<question>The US Capitol can be found in which location?</question>
         	<answer>Denver</answer>
-        	<answer correct="y">Washington D.C</answer>
+        	<answer>Washington D.C</answer>
         	<answer>New York</answer>
         	<answer>Atlanta</answer>
+		<level> E </level>
+		<correct>Washington D.C</correct>
 	</item>
 	<item>
         	<question>Los Alamos can be found in which location?</question>
         	<answer>Arizona</answer>
-        	<answer correct="y">New Mexico</answer>
+        	<answer>New Mexico</answer>
         	<answer>Nevada</answer>
         	<answer>Texas</answer>
+		<level> E </level>
+		<correct>New Mexico</correct>
 	</item>
 	<item>
         	<question>Palazzo Vecchio can be found in which location?</question>
         	<answer>Rome</answer>
-        	<answer correct="y">Florence</answer>
+        	<answer>Florence</answer>
         	<answer>Naples</answer>
         	<answer>Milan</answer>
+		<level> E </level>
+		<correct>Florence</correct>
 	</item>
 	<item>
         	<question>Saint Issac's Cathedral can be found in which location?</question>
         	<answer>Minsk</answer>
-        	<answer correct="y">Saint Petersburg</answer>
+        	<answer>Saint Petersburg</answer>
         	<answer>Kiev</answer>
         	<answer>Moscow</answer>
+		<level> M </level>
+		<correct>Saint Petersburg</correct>
 	</item>
 	<item>
         	<question>La Scala can be found in which location?</question>
         	<answer>Naples</answer>
-        	<answer correct="y">Milan</answer>
+        	<answer>Milan</answer>
         	<answer>Rome</answer>
         	<answer>Venice</answer>
+		<level> E </level>
+		<correct>Milan</correct>
 	</item>
 	<item>
         	<question>What is the name of Sophie's love-interest and fiancé (Mamma mia!)?</question>
         	<answer>Eddie</answer>
-        	<answer correct="y">Sky</answer>
+        	<answer>Sky</answer>
         	<answer>Sam</answer>
         	<answer>Harry</answer>
+		<level> E </level>
+		<correct>Sky</correct>
 	</item>
 	<item>
         	<question>Who turns out to be the love interest of Donna's friend Rosie (Mamma mia!)?</question>
         	<answer>Sam Carmichael</answer>
-        	<answer correct="y">Bill Anderson</answer>
+        	<answer>Bill Anderson</answer>
         	<answer>Fernado Cienfuegos</answer>
         	<answer>Harry Bright</answer>
+		<level> M </level>
+		<correct>Bill Anderson</correct>
 	</item>
 	<item>
         	<question>Which actor played the role of Fernando Cienfuegos(Mamma mia 2!)?</question>
@@ -190,41 +242,53 @@
         	<answer correct="y">Andy Garcia</answer>
         	<answer>Kevin Bacon</answer>
         	<answer>Anthony Hopkins</answer>
+		<level> M </level>
+		<correct>Andy Garcia</correct>
 	</item>
 	<item>
         	<question>Young Donna and Sam save what kind of animal while exploring an old farmhouse(Mamma mia 2!)?</question>
         	<answer>Cow</answer>
-        	<answer correct="y">Horse</answer>
+        	<answer>Horse</answer>
         	<answer>Pig</answer>
         	<answer>Sheep</answer>
+		<level> M </level>
+		<correct>Horse</correct>
 	</item>
 	<item>
         	<question>What is the name of the island on "Mamma mia!", ?</question>
         	<answer>Zakynthos</answer>
-        	<answer correct="y">Kalokairi</answer>
+        	<answer>Kalokairi</answer>
         	<answer>Mykonos</answer>
         	<answer>Skiathos</answer>
+		<level> M </level>
+		<correct>Kalokairi</correct>
 	</item>
 	<item>
         	<question>In which country was "Mamma mia!" filmed?</question>
         	<answer>Italy</answer>
-        	<answer correct="y">Greece</answer>
+        	<answer>Greece</answer>
         	<answer>Spain</answer>
         	<answer>France</answer>
+		<level> M </level>
+		<correct>Greece</correct>
 	</item>
 	<item>
-        	<question>Young Donna and Sam save what kind of animal while exploring an old farmhouse(Mamma mia 2!)?</question>
-        	<answer>Cow</answer>
-        	<answer correct="y">Horse</answer>
-        	<answer>Pig</answer>
-        	<answer>Sheep</answer>
+        	<question>Where does young Donna and Sam meet? (Mamma mia 2!)?</question>
+        	<answer>Road</answer>
+        	<answer>Farmhouse</answer>
+        	<answer>Restaurant</answer>
+        	<answer>Hotel</answer>
+		<level> M </level>
+		<correct>Road</correct>
 	</item>
 	<item>
         	<question>Dominica is the capital of which country?</question>
         	<answer>Palikir</answer>
-        	<answer correct="y">Roseau</answer>
+        	<answer>Roseau</answer>
         	<answer>Apia</answer>
         	<answer>Moroni</answer>
+		<level> D </level>
+		<correct>Roseau</correct>
 	</item>
 	<item>
         	<question>Saint Lucia is the capital of which country?</question>
@@ -232,69 +296,90 @@
         	<answer correct="y">Castries</answer>
         	<answer>Tarawa</answer>
         	<answer>Willemstad</answer>
+		<level> D </level>
+		<correct>Castries</correct>
 	</item>
 	<item>
         	<question>Cape Verde is the capital of which country?</question>
         	<answer>Apia</answer>
-        	<answer correct="y">Praia</answer>
+        	<answer>Praia</answer>
         	<answer>Male</answer>
         	<answer>Saint George's</answer>
+		<level> D </level>
+		<correct>Praia</correct>
 	</item>
 	<item>
         	<question>Solomon Islands is the capital of which country?</question>
         	<answer>Pago Pago</answer>
-        	<answer correct="y">Honiara</answer>
+        	<answer>Honiara</answer>
         	<answer>Male</answer>
         	<answer>Saint George's</answer>
+		<level> D </level>
+		<correct>Honiara</correct>
 	</item>
 	<item>
         	<question>Qatar is the capital of which country?</question>
         	<answer>Male</answer>
-        	<answer correct="y">Doha</answer>
+        	<answer>Doha</answer>
         	<answer>Roseau</answer>
         	<answer>Saint George's</answer>
+		<level> M </level>
+		<correct>Doha</correct>
 	</item>
 	<item>
         	<question>Seychelles is the capital of which country?</question>
         	<answer>Praia</answer>
-        	<answer correct="y">Victoria</answer>
+        	<answer>Victoria</answer>
         	<answer>Majuro</answer>
         	<answer>Saint George's</answer>
+		<level> M </level>
+		<correct>Victoria</correct>
 	</item>
 	<item>
-        	<question>Seychelles is the capital of which country?</question>
-        	<answer>Praia</answer>
-        	<answer correct="y">Victoria</answer>
-        	<answer>Majuro</answer>
-        	<answer>Saint George's</answer>
+        	<question>Nicosia is the capital of which country?</question>
+        	<answer>Greece</answer>
+        	<answer>Malta</answer>
+        	<answer>Cyprus</answer>
+        	<answer>Georgia</answer>
+		<level> D </level>
+		<correct>Cyprus</correct>
+		
 	</item>
 	<item>
         	<question>Fear of disease is also known as which phobia?</question>
         	<answer>Ophidiophobia</answer>
-        	<answer correct="y">Pathophobia</answer>
+        	<answer>Pathophobia</answer>
         	<answer>Acrophobia</answer>
         	<answer>Selenophobia</answer>
+		<level> M </level>
+		<correct>Pathophobia</correct>
 	</item>
 	<item>
         	<question>Fear of choking is also known as which phobia?</question>
         	<answer>Entomophobia</answer>
-        	<answer correct="y">Agignophobia</answer>
+        	<answer>Agignophobia</answer>
         	<answer>Acrophobia</answer>
         	<answer>Selenophobia</answer>
+		<level> M </level>
+		<correct>Agignophobia</correct>
 	</item>
 	<item>
         	<question>Fear of beautiful women is also known as which phobia?</question>
         	<answer>Elurophobia</answer>
-        	<answer correct="y">Venustraphobia</answer>
+        	<answer>Venustraphobia</answer>
         	<answer>Anthrophobia</answer>
         	<answer>Barophobiaphobia</answer>
+		<level> M </level>
+		<correct>Venustraphobia</correct>
 	</item>
 	<item>
         	<question>Fear of horses is also known as which phobia?</question>
         	<answer>Nosocomephobia</answer>
-        	<answer correct="y">Equinophobia</answer>
+        	<answer>Equinophobia</answer>
         	<answer>Barophobia</answer>
         	<answer>Philophobia</answer>
+		<level> M </level>
+		<correct>Equinophobia</correct>
 	</item>
 	<item>
         	<question>Fear of snakes is also known as which phobia?</question>
@@ -302,55 +387,71 @@
         	<answer correct="y">Ophiophobia</answer>
         	<answer>Cynophobia</answer>
         	<answer>Melanophobia</answer>
+		<level> M </level>
+		<correct>Ophiophobia</correct>
 	</item>
 	<item>
         	<question>Fear of color black is also known as which phobia?</question>
         	<answer>Amaxophobia</answer>
-        	<answer correct="y">Melanophobia</answer>
+        	<answer>Melanophobia</answer>
         	<answer>Ombrophobia</answer>
         	<answer>Trypanophobia</answer>
+		<level> M </level>
+		<correct>Melanophobia</correct>
 	</item>
 	<item>
         	<question>Fear of hospitals is also known as which phobia?</question>
         	<answer>Entomophobia</answer>
-        	<answer correct="y">Nosocomephobia</answer>
+        	<answer>Nosocomephobia</answer>
         	<answer>Selenophobia</answer>
         	<answer>Ophidiophobia</answer>
+		<level> M </level>
+		<correct>Nosocomephobia</correct>
 	</item>
 	<item>
         	<question>Fear of gravity is also known as which phobia?</question>
         	<answer>Venustraphobia</answer>
-        	<answer correct="y">Barophobia</answer>
+        	<answer>Barophobia</answer>
         	<answer>Selenophobia</answer>
         	<answer>Pathophobia</answer>
+		<level> M </level>
+		<correct>Barophobia</correct>
 	</item>
 	<item>
         	<question>Fear of clocks is also known as which phobia?</question>
         	<answer>Nosocomephobia</answer>
-        	<answer correct="y">Chronomentrophobia</answer>
+        	<answer>Chronomentrophobia</answer>
         	<answer>Cynophobia</answer>
         	<answer>Melanophobia</answer>
+		<level> M </level>
+		<correct>Chronomentrophobia</correct>
 	</item>
 	<item>
         	<question>Fear of dogs is also known as which phobia?</question>
         	<answer>Pteromerhanophobia</answer>
-        	<answer correct="y">Cynophobia</answer>
+        	<answer>Cynophobia</answer>
         	<answer>Selenophobia</answer>
         	<answer>Melanophobia</answer>
+		<level> M </level>
+		<correct>Cynophobia</correct>
 	</item>
 	<item>
         	<question>What's the name of our galaxy?</question>
         	<answer>Andromeda Galaxy</answer>
-        	<answer correct="y">The Milky Way</answer>
+        	<answer>The Milky Way</answer>
         	<answer>Magellan</answer>
         	<answer>Alpha Centauri</answer>
+		<level> M </level>
+		<correct>The Milky Way</correct>
 	</item>
 	<item>
         	<question>A 'falling star' is also known as what?</question>
         	<answer>Meteorite</answer>
-        	<answer correct="y">Meteor</answer>
+        	<answer>Meteor</answer>
         	<answer>Meteoroid</answer>
         	<answer>Meter</answer>
+		<level> M </level>
+		<correct>Meteor</correct>
 	</item>
 	<item>
         	<question>Whats is the approximate circumference of the Earth?</question>
@@ -362,218 +463,280 @@
 	<item>
         	<question>Which of these planets is the smallest?</question>
         	<answer>Earth</answer>
-        	<answer correct="y">Mercury</answer>
+        	<answer>Mercury</answer>
         	<answer>Venus</answer>
         	<answer>Neptune</answer>
+		<level> M </level>
+		<correct>Mercury</correct>
 	</item>
 	<item>
         	<question>Satellite Cordelia orbits which planet?</question>
         	<answer>Earth</answer>
-        	<answer correct="y">Uranus</answer>
+        	<answer>Uranus</answer>
         	<answer>Neptune</answer>
         	<answer>Pluto</answer>
+		<level> M </level>
+		<correct>Uranus</correct>
 	</item>
 	<item>
         	<question>Satellite Enceladus orbits which planet?</question>
         	<answer>Jupiter</answer>
-        	<answer correct="y">Saturn</answer>
+        	<answer>Saturn</answer>
         	<answer>Neptune</answer>
         	<answer>Pluto</answer>
+		<level> D </level>
+		<correct>Saturn</correct>
 	</item>
 	<item>
         	<question>Satellite Tethys orbits which planet?</question>
         	<answer>Uranus</answer>
-        	<answer correct="y">Saturn</answer>
+        	<answer>Saturn</answer>
         	<answer>Neptune</answer>
         	<answer>Jupiter</answer>
+		<level> M </level>
+		<correct>Saturn</correct>
 	</item>
 	<item>
         	<question>Satellite Mimas orbits which planet?</question>
         	<answer>Jupiter</answer>
-        	<answer correct="y">Saturn</answer>
+        	<answer>Saturn</answer>
         	<answer>Neptune</answer>
         	<answer>Uranus</answer>
+		<level> D </level>
+		<correct>Saturn</correct>
 	</item>
 	<item>
         	<question>Satellite Deimos orbits which planet?</question>
         	<answer>Jupiter</answer>
-        	<answer correct="y">Mars</answer>
+        	<answer>Mars</answer>
         	<answer>Mercury</answer>
         	<answer>Venus</answer>
+		<level> M </level>
+		<correct>Mars</correct>
 	</item>
 	<item>
         	<question>Satellite Dione orbits which planet?</question>
         	<answer>Jupiter</answer>
-        	<answer correct="y">Saturn</answer>
+        	<answer>Saturn</answer>
         	<answer>Neptune</answer>
         	<answer>Uranus</answer>
+		<level> D </level>
+		<correct>Saturn</correct>
 	</item>
 	<item>
         	<question>Satellite Rhea orbits which planet?</question>
         	<answer>Jupiter</answer>
-        	<answer correct="y">Saturn</answer>
+        	<answer>Saturn</answer>
         	<answer>Neptune</answer>
         	<answer>Uranus</answer>
+		<level> D </level>
+		<correct>Saturn</correct>
 	</item>
 	<item>
         	<question>Satellite Telesto orbits which planet?</question>
         	<answer>Jupiter</answer>
-        	<answer correct="y">Saturn</answer>
+        	<answer>Saturn</answer>
         	<answer>Neptune</answer>
         	<answer>Uranus</answer>
+		<level> D </level>
+		<correct>Saturn</correct>
 	</item>
 	<item>
         	<question>Satellite Nereid orbits which planet?</question>
         	<answer>Jupiter</answer>
-        	<answer correct="y">Neptune</answer>
+        	<answer>Neptune</answer>
         	<answer>Saturn</answer>
         	<answer>Uranus</answer>
+		<level> M </level>
+		<correct>Neptune</correct>
 	</item>
 	<item>
         	<question>Who is the main antagonist of 'Alice in Wonderland'?</question>
         	<answer>Queen of Diamonds</answer>
-        	<answer correct="y">Queen of Hearts</answer>
+        	<answer>Queen of Hearts</answer>
         	<answer>Queen of Spades</answer>
         	<answer>Queen of Clubs</answer>
+		<level> M </level>
+		<correct>Queen of Hearts</correct>
 	</item>
 	<item>
         	<question>Who is pink and purple striped in 'Alice in Wonderland'?</question>
         	<answer>Mad Hatter</answer>
-        	<answer correct="y">Cheshire Cat</answer>
+        	<answer>Cheshire Cat</answer>
         	<answer>Dormouse</answer>
         	<answer>March Hare</answer>
+		<level> M </level>
+		<correct>Cheshire Cat</correct>
 	</item>
 	<item>
         	<question>Who is the kidnapped princess in 'Tangled'?</question>
         	<answer>Aurora</answer>
-        	<answer correct="y">Rapunzel</answer>
+        	<answer>Rapunzel</answer>
         	<answer>Merida</answer>
         	<answer>Bell</answer>
+		<level> M </level>
+		<correct>Rapunzel</correct>
 	</item>
 	<item>
         	<question>Who is the main antagonist in 'Sleeping Beauty'?</question>
         	<answer>Cruella De Vil</answer>
-        	<answer correct="y">Maleficent</answer>
+        	<answer>Maleficent</answer>
         	<answer>Mother Gothel</answer>
         	<answer>Madam Mim</answer>
+		<level> D </level>
+		<correct>Maleficent</correct>
 	</item>
 	<item>
         	<question>Who is the protagonist young girl in 'Bolt'?</question>
         	<answer>Bianca</answer>
-        	<answer correct="y">Penny</answer>
+        	<answer>Penny</answer>
         	<answer>Jenny</answer>
         	<answer>Mary</answer>
+		<level> D </level>
+		<correct>Penny</correct>
 	</item>
 	<item>
         	<question>Who is the main antagonist in 'Peter Pan'?</question>
         	<answer>Captain Phoebus</answer>
-        	<answer correct="y">Captain Hook</answer>
+        	<answer>Captain Hook</answer>
         	<answer>Captain Flint</answer>
         	<answer>Captain Ector</answer>
+		<level> D </level>
+		<correct>Captain Hook</correct>
 	</item>
 	<item>
         	<question>Who is the magical blue and bearded creature in 'Aladdin'?</question>
         	<answer>Gurgi</answer>
-        	<answer correct="y">Genie</answer>
+        	<answer>Genie</answer>
         	<answer>Jafar</answer>
         	<answer>Flounder</answer>
+		<level> E </level>
+		<correct>Genie</correct>
 	</item>
 	<item>
-        	<question>Who is the main antagonist of Alice in Wonderland?</question>
-        	<answer>Queen of Diamonds</answer>
-        	<answer correct="y">Queen of Hearts</answer>
-        	<answer>Queen of Spades</answer>
-        	<answer>Queen of Clubs</answer>
+        	<question>Who is the main antagonist in 'Frozen'?</question>
+        	<answer>Elsa</answer>
+        	<answer>Anna</answer>
+        	<answer>Olaf</answer>
+        	<answer>Hans</answer>
+		<level> D </level>
+		<correct>Hans</correct>
 	</item>
 	<item>
         	<question>Who played Ghost Rider in a superhero movie?</question>
         	<answer>Julian McMahon</answer>
-        	<answer correct="y">Nicolas Cage</answer>
+        	<answer>Nicolas Cage</answer>
         	<answer>Alec Baldwin</answer>
         	<answer>Chris Evans</answer>
+		<level> E </level>
+		<correct>Nicolas Cage</correct>
 	</item>
 	<item>
         	<question>Who played Tony Stark in a superhero movie?</question>
         	<answer>Nicolas Cage</answer>
-        	<answer correct="y">Robert Downey Jr.</answer>
+        	<answer>Robert Downey Jr.</answer>
         	<answer>Hugh Jackman</answer>
         	<answer>Chris Evans</answer>
+		<level> E </level>
+		<correct>Robert Downey Jr.</correct>
 	</item>
 	<item>
         	<question>Who played Superman in a superhero movie?</question>
         	<answer>Alfred Molina</answer>
-        	<answer correct="y">Christopher Reeve</answer>
+        	<answer>Christopher Reeve</answer>
         	<answer>Gene Hackman</answer>
         	<answer>Edward Norton</answer>
+		<level> D </level>
+		<correct>Christopher Reeve</correct>
 	</item>
 	<item>
         	<question>Who played Daredevil in a superhero movie?</question>
         	<answer>Alec Baldwin</answer>
-        	<answer correct="y">Ben Affleck</answer>
+        	<answer>Ben Affleck</answer>
         	<answer>Hugh Jackman</answer>
         	<answer>Edward Norton</answer>
+		<level> D </level>
+		<correct>Ben Affleck</correct>
 	</item>
 	<item>
         	<question>Who played Storm (X-men) in a superhero movie?</question>
         	<answer>Rebecca Romijn</answer>
-        	<answer correct="y">Halle Berry</answer>
+        	<answer>Halle Berry</answer>
         	<answer>Famke Janssen</answer>
         	<answer>Anna Paquin</answer>
+		<level> D </level>
+		<correct>Halle Berry</correct>
 	</item>
 	<item>
         	<question>Who played Jean Grey (X-men) in a superhero movie?</question>
         	<answer>Rebecca Romijn</answer>
-        	<answer correct="y">Famke Janssen</answer>
+        	<answer>Famke Janssen</answer>
         	<answer>Jennifer Connelly</answer>
         	<answer>Liv Tyler</answer>
+		<level> D </level>
+		<correct>Famke Janssen</correct>
 	</item>
 	<item>
         	<question>Who played Betty Ross in a superhero movie?</question>
         	<answer>Jennifer Garner</answer>
-        	<answer correct="y">Jennifer Connelly</answer>
+        	<answer>Jennifer Connelly</answer>
         	<answer>Kirsten Dunst</answer>
         	<answer>Anna Paquin</answer>
+		<level> D </level>
+		<correct>Jennifer Connelly</correct>
 	</item>
 	<item>
         	<question>Who played Batman in a superhero movie?</question>
         	<answer>Robert Downey Jr.</answer>
-        	<answer correct="y">Christian Bale</answer>
+        	<answer>Christian Bale</answer>
         	<answer>Edward Norton</answer>
         	<answer>Jack Nicholson</answer>
+		<level> D </level>
+		<correct>Christian Bale</correct>
 	</item>
 	<item>
         	<question>Who played Lex Luthor in a superhero movie?</question>
         	<answer>Willem Dafoe</answer>
-        	<answer correct="y">Gene Hackman</answer>
+        	<answer>Gene Hackman</answer>
         	<answer>Alfred Molina</answer>
         	<answer>Edward Norton</answer>
+		<level> D </level>
+		<correct>Gene Hackman</correct>
 	</item>
 	<item>
         	<question>Dr. Doom in which superhero movie appears?</question>
-        	<answer>Superman Returns</answer>
-        	<answer correct="y">Fantastic Four</answer>
+        	<answer>Batman Returns</answer>
+        	<answer>Fantastic Four</answer>
         	<answer>Batman and Robin</answer>
         	<answer>X-men 2</answer>
+		<level> D </level>
+		<correct>Fantastic Four</correct>
 	</item>
 	<item>
         	<question>The Penguin in which superhero movie appears?</question>
         	<answer>The Dark Knight</answer>
-        	<answer correct="y">Superman Returns</answer>
+        	<answer>Batman Returns</answer>
         	<answer>Batman and Robin</answer>
         	<answer>Batman Forever</answer>
+		<level> D </level>
+		<correct>Batman Returns</correct>
 	</item>
 	<item>
         	<question>Poison Ivy in which superhero movie appears?</question>
         	<answer>Hellboy</answer>
-        	<answer correct="y">Batman and Robin</answer>
+        	<answer>Batman and Robin</answer>
         	<answer>Batman Forever</answer>
         	<answer>Superman III</answer>
+		<level> D </level>
+		<correct>Batman and Robin</correct>
 	</item>
 	<item>
         	<question>Mystique in which superhero movie appears?</question>
         	<answer>Fantastic Four</answer>
-        	<answer correct="y">X-men</answer>
+        	<answer>X-men</answer>
         	<answer>Batman and Robin</answer>
         	<answer>Superman</answer>
-	</item>
+		<level> E </level>
+		<correct>X-men</correct>
+	</item> 
 </quiz>
