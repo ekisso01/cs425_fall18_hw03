@@ -68,7 +68,9 @@
  width: 25%;
  border: 1px solid;
  border-radius: 25px;
-
+ padding-right: 8px;
+ padding: 20px;
+ 
 }
 
 .close{
@@ -120,16 +122,47 @@
 }
 
 #savebtn{
- margin-left: 15px;
+ margin-left: 0px;
  float: left;
+ width: 100%;
 }
 
 #returnbtn{
- margin-left: 42px;
- width: 50%;
+ margin-left: 0px;
+ width: 100%;
 
 }
 
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+input[type=text]{
+ width: 75%;
+ padding: 6px;
+ border: 1px solid #ccc;
+ border-radius: 4px;
+ resize: vertical;
+ 
+
+}
 
 @media screen and (max-width: 450px) {
     .mainHeader h1 {
@@ -142,6 +175,18 @@
     } 
     .QuestionForm{
       width: 95%;
+
+    }
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+	padding-top:5px;
+    }
+    
+}
+@media screen and (max-width: 1560px) {
+.quizScoreForm{
+       width: 50%;
 
     }
 }

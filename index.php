@@ -40,6 +40,8 @@
 	 }
 	 else if(isset($_POST["startButton"]) or isset($_POST["returnButton"]) ) {
 		$_SESSION["questioncount"]=1;
+		$_SESSION["score"]=0;
+		$_SESSION["fanswers"]=array();
 	 }
 	
 	if((isset($_POST["startButton"]) or isset($_POST["nextButton"])) and $_SESSION["questioncount"]<11){
@@ -65,26 +67,39 @@
 			else if (strcmp($_POST["answers"],$xml->item[$_SESSION["prevQuestion"]]->correct) == 0 and strcmp($xml->item[$_SESSION["prevQuestion"]]->level, " E ")==0){
 				
 				$level=" M ";
+				$_SESSION["score"]=$_SESSION["score"]+5;
+				array_push($_SESSION["fanswers"],"Correct");
+				
 			}
 			else if (strcmp($_POST["answers"],$xml->item[$_SESSION["prevQuestion"]]->correct) != 0 and strcmp($xml->item[$_SESSION["prevQuestion"]]->level, " E ")==0){
 				
 				$level=" E ";
+				$_SESSION["score"]=$_SESSION["score"]+0;
+				array_push($_SESSION["fanswers"],"Incorrect");
 			}
 			else if (strcmp($_POST["answers"],$xml->item[$_SESSION["prevQuestion"]]->correct) == 0 and strcmp($xml->item[$_SESSION["prevQuestion"]]->level, " M ")==0){
 				
 				$level=" D ";
+				$_SESSION["score"]=$_SESSION["score"]+10;
+				array_push($_SESSION["fanswers"],"Correct");
 			}
 			else if (strcmp($_POST["answers"],$xml->item[$_SESSION["prevQuestion"]]->correct) != 0 and strcmp($xml->item[$_SESSION["prevQuestion"]]->level, " M ")==0){
 				
 				$level=" E ";
+				$_SESSION["score"]=$_SESSION["score"]+0;
+				array_push($_SESSION["fanswers"],"Incorrect");
 			}
 			else if (strcmp($_POST["answers"],$xml->item[$_SESSION["prevQuestion"]]->correct) == 0 and strcmp($xml->item[$_SESSION["prevQuestion"]]->level, " D ")==0){
 				
 				$level=" D ";
+				$_SESSION["score"]=$_SESSION["score"]+20;
+				array_push($_SESSION["fanswers"],"Correct");
 			}
 			else if (strcmp($_POST["answers"],$xml->item[$_SESSION["prevQuestion"]]->correct) !=0 and strcmp($xml->item[$_SESSION["prevQuestion"]]->level , " D ")==0){	
 				
 				$level=" M ";
+				$_SESSION["score"]=$_SESSION["score"]+0;
+				array_push($_SESSION["fanswers"],"Incorrect");
 			}
 						
 			$i=rand(0,80);
@@ -163,33 +178,79 @@
 	<?php 
 		}else if($_SESSION["questioncount"]>10){
 
+			$xml = simplexml_load_file('xml/questionsXML.xml');
+
+			if (strcmp($_POST["answers"],$xml->item[$_SESSION["prevQuestion"]]->correct) == 0 and strcmp($xml->item[$_SESSION["prevQuestion"]]->level, " E ")==0){
+				echo "1";
+				$_SESSION["score"]=$_SESSION["score"]+5;
+				array_push($_SESSION["fanswers"],"Correct");
+				
+			}
+			else if (strcmp($_POST["answers"],$xml->item[$_SESSION["prevQuestion"]]->correct) != 0 and strcmp($xml->item[$_SESSION["prevQuestion"]]->level, " E ")==0){
+				echo "2";
+				$_SESSION["score"]=$_SESSION["score"]+0;
+				array_push($_SESSION["fanswers"],"Incorrect");
+			}
+			else if (strcmp($_POST["answers"],$xml->item[$_SESSION["prevQuestion"]]->correct) == 0 and strcmp($xml->item[$_SESSION["prevQuestion"]]->level, " M ")==0){
+				echo "3";
+				$_SESSION["score"]=$_SESSION["score"]+10;
+				array_push($_SESSION["fanswers"],"Correct");
+			}
+			else if (strcmp($_POST["answers"],$xml->item[$_SESSION["prevQuestion"]]->correct) != 0 and strcmp($xml->item[$_SESSION["prevQuestion"]]->level, " M ")==0){
+				echo "4";
+				$_SESSION["score"]=$_SESSION["score"]+0;
+				array_push($_SESSION["fanswers"],"Incorrect");
+			}
+			else if (strcmp($_POST["answers"],$xml->item[$_SESSION["prevQuestion"]]->correct) == 0 and strcmp($xml->item[$_SESSION["prevQuestion"]]->level, " D ")==0){
+				echo "5";
+				$_SESSION["score"]=$_SESSION["score"]+20;
+				array_push($_SESSION["fanswers"],"Correct");
+			}
+			else if (strcmp($_POST["answers"],$xml->item[$_SESSION["prevQuestion"]]->correct) !=0 and strcmp($xml->item[$_SESSION["prevQuestion"]]->level , " D ")==0){	
+				echo "6";
+				$_SESSION["score"]=$_SESSION["score"]+0;
+				array_push($_SESSION["fanswers"],"Incorrect");
+			}
+
+			
+
+
 	?>
 	<form class="quizScoreForm" method="post">
 	  
-	  
-
-	  <table class="buttons">
-		<tr><td>
-		<label id="generallbl">Your score :</label>
-		</td>
-		<td>
-		<input type="text" name="score" id="generaltxt">
-		</td>
-		<tr><td>
-		<label id="generallbl">Nickname :</label>
-		</td>
-		<td>
-		<input type="text" name="nickname" id="generaltxt" placeholder=" Your nickname..">
-		</td>
-		</tr>
-		<tr><td>
-		<button type="submit" class="btn btn-info" name="SaveButton" id="savebtn">Save your score</button>
-		</td>
-		<td>
-		<button type="submit" class="btn btn-info" name="returnButton" id="returnbtn">Return</button>
-		</td>
-		</tr>
-	  </table>
+	  <div class="row">
+			<div class="col-25">
+				<label>Your score :</label>
+			</div>
+		<div class="col-75">
+			<label id="generallbl"><?php echo $_SESSION["score"] ?></label>
+		</div>
+		</div>
+		<br>
+	  <div class="row">
+			<div class="col-25">
+				<label>Nickname :</label>
+			</div>
+	  	<div class="col-75">
+			<input type="text" name="nickname" id="generaltxt" placeholder=" Your nickname.." autofocus>
+		</div>
+		</div>
+		<br>
+	<div class="row">
+		<?php print_r($_SESSION["fanswers"]); ?>
+	</div>
+	<div class="row">
+			<div class="col-75">
+				<button type="submit" class="btn btn-info" name="SaveButton" id="savebtn">Save your score</button>
+			</div>
+		</div>
+		
+	<div class="row">
+			
+		<div class="col-75">
+			<button type="submit" class="btn btn-info" name="returnButton" id="returnbtn">Return</button>
+		</div>
+		</div>
 	</form>
 	<!--to be tranfered to the start page -->
 	<?php 
