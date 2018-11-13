@@ -60,12 +60,12 @@
 }
 
 .quizScoreForm{
- margin-top: 15%;
+ margin-top: 52px;
  margin-left: auto;
  margin-right: auto;
  text-align: center;
  color: white;
- width: 25%;
+ width: 50%;
  border: 1px solid;
  border-radius: 25px;
  padding-right: 8px;
@@ -164,6 +164,29 @@ input[type=text]{
 
 }
 
+.finalQuestions{
+ float: left;
+}
+
+.Correct{
+ background-color: #009900;
+ color: white;
+ width: 75%;
+ margin-left: auto;
+ margin-right: auto;
+ border-radius: 4px;
+}
+
+.Incorrect{
+ background-color: #ff3232;
+ color: white;
+ width: 75%;
+ margin-left: auto;
+ margin-right: auto;
+ border-radius: 4px;
+}
+
+
 @media screen and (max-width: 450px) {
     .mainHeader h1 {
        font-size: 20px;
@@ -186,7 +209,7 @@ input[type=text]{
 }
 @media screen and (max-width: 1560px) {
 .quizScoreForm{
-       width: 50%;
+       width: 70%;
 
     }
 }

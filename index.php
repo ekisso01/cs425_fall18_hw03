@@ -42,16 +42,18 @@
 		$_SESSION["questioncount"]=1;
 		$_SESSION["score"]=0;
 		$_SESSION["fanswers"]=array();
+		$_SESSION["fquestions"]=array();
+		$_SESSION["flevels"]=array();
 	 }
 	
-	if((isset($_POST["startButton"]) or isset($_POST["nextButton"])) and $_SESSION["questioncount"]<11){
+	if((isset($_POST["startButton"]) or isset($_POST["nextButton"])) and $_SESSION["questioncount"]<6){
 	 
 	 
 	?>
 	<!-- to be tranfered to the page of the actual game -->
 	<form method="post" class="QuestionForm">
 	   <div>
-           <label name="numQuestions" id="numQuestions"><?= $_SESSION["questioncount"]."/10" ?> </label>
+           <label name="numQuestions" id="numQuestions"><?= $_SESSION["questioncount"]."/5" ?> </label>
 	   
 	   <button type="submit" class="close" aria-label="Close" name="closeButton">
   		<span aria-hidden="true">&times;</span>
@@ -69,7 +71,7 @@
 				$level=" M ";
 				$_SESSION["score"]=$_SESSION["score"]+5;
 				array_push($_SESSION["fanswers"],"Correct");
-				
+							
 			}
 			else if (strcmp($_POST["answers"],$xml->item[$_SESSION["prevQuestion"]]->correct) != 0 and strcmp($xml->item[$_SESSION["prevQuestion"]]->level, " E ")==0){
 				
@@ -101,13 +103,14 @@
 				$_SESSION["score"]=$_SESSION["score"]+0;
 				array_push($_SESSION["fanswers"],"Incorrect");
 			}
-						
+				
 			$i=rand(0,80);
 			while ($xml->item[$i]->level != $level){
 				$i=rand(0,80);
 			}
 			$_SESSION["prevQuestion"]=$i;
-			
+			array_push($_SESSION["fquestions"],(string) $xml->item[$i]->question);
+			array_push($_SESSION["flevels"],(string) $xml->item[$i]->level);
 		?>
 	   <label for="question" id="questionlbl">
 	   <?php 
@@ -151,7 +154,7 @@
 		<button type="submit" class="btn btn-info" name="nextButton">
 		<!-- To check if the button should say next or finish -->
 		<?php
-			if($_SESSION["questioncount"]==10){
+			if($_SESSION["questioncount"]==5){
 		?>
 		Finish
 		<?php
@@ -174,40 +177,59 @@
 		</div>
 	</form>
 	
+
+
+	<!--to be tranfered to the start page -->
+	<?php 
+		
+	}else if (isset($_POST["returnButton"]) or isset($_POST["closeButton"]) or !isset($_SESSION["questioncount"]) or $_SERVER['REQUEST_METHOD'] === 'GET'){
+		session_unset();
+	?>
+	<div class="mainContent">
+	<div class="mainHeader">
+		<h1>Welcome, are you ready to play? </h1>
+	</div>
+	
+	<form  method="post" class="mainPageForm">
+		<button type="submit" class="btn btn-success" name="startButton">Start</button>
+	</form>
+	</div>
+	
+
 	<!-- to be transfer to the page of the current score --> 
 	<?php 
-		}else if($_SESSION["questioncount"]>10){
+		}else if($_SESSION["questioncount"]>5){
 
 			$xml = simplexml_load_file('xml/questionsXML.xml');
 
 			if (strcmp($_POST["answers"],$xml->item[$_SESSION["prevQuestion"]]->correct) == 0 and strcmp($xml->item[$_SESSION["prevQuestion"]]->level, " E ")==0){
-				echo "1";
+				
 				$_SESSION["score"]=$_SESSION["score"]+5;
 				array_push($_SESSION["fanswers"],"Correct");
 				
 			}
 			else if (strcmp($_POST["answers"],$xml->item[$_SESSION["prevQuestion"]]->correct) != 0 and strcmp($xml->item[$_SESSION["prevQuestion"]]->level, " E ")==0){
-				echo "2";
+				
 				$_SESSION["score"]=$_SESSION["score"]+0;
 				array_push($_SESSION["fanswers"],"Incorrect");
 			}
 			else if (strcmp($_POST["answers"],$xml->item[$_SESSION["prevQuestion"]]->correct) == 0 and strcmp($xml->item[$_SESSION["prevQuestion"]]->level, " M ")==0){
-				echo "3";
+				
 				$_SESSION["score"]=$_SESSION["score"]+10;
 				array_push($_SESSION["fanswers"],"Correct");
 			}
 			else if (strcmp($_POST["answers"],$xml->item[$_SESSION["prevQuestion"]]->correct) != 0 and strcmp($xml->item[$_SESSION["prevQuestion"]]->level, " M ")==0){
-				echo "4";
+				
 				$_SESSION["score"]=$_SESSION["score"]+0;
 				array_push($_SESSION["fanswers"],"Incorrect");
 			}
 			else if (strcmp($_POST["answers"],$xml->item[$_SESSION["prevQuestion"]]->correct) == 0 and strcmp($xml->item[$_SESSION["prevQuestion"]]->level, " D ")==0){
-				echo "5";
+				
 				$_SESSION["score"]=$_SESSION["score"]+20;
 				array_push($_SESSION["fanswers"],"Correct");
 			}
 			else if (strcmp($_POST["answers"],$xml->item[$_SESSION["prevQuestion"]]->correct) !=0 and strcmp($xml->item[$_SESSION["prevQuestion"]]->level , " D ")==0){	
-				echo "6";
+				
 				$_SESSION["score"]=$_SESSION["score"]+0;
 				array_push($_SESSION["fanswers"],"Incorrect");
 			}
@@ -237,7 +259,37 @@
 		</div>
 		<br>
 	<div class="row">
-		<?php print_r($_SESSION["fanswers"]); ?>
+		<?php 	
+			for($j=0; $j<sizeof($_SESSION["fquestions"]); $j++ ){ 
+		echo "<div class=\"{$_SESSION["fanswers"][$j]}\">";
+		?>
+		<div class="col-25">
+				<?php 
+					if (strcmp($_SESSION["fanswers"][$j],"Incorrect")==0){
+						$x=" (+0)";
+
+					}else if(strcmp($_SESSION["flevels"][$j]," E ")==0){
+						$x=" (+5)";
+					}else if(strcmp($_SESSION["flevels"][$j]," M ")==0){
+						$x=" (+10)";
+					}else if(strcmp($_SESSION["flevels"][$j]," D ")==0){
+						$x=" (+20)";
+					}
+				?>
+				<label class="finals"><?php echo $_SESSION["flevels"][$j] . $x; ?></label>
+		</div>
+		<div class="col-75">
+				<label class="finalQuestions"><?php echo $_SESSION["fquestions"][$j]; ?></label>
+		</div>
+		</div>
+		<br>
+		<?php
+		    
+		      }
+			
+		?>
+
+		
 	</div>
 	<div class="row">
 			<div class="col-75">
@@ -251,29 +303,19 @@
 			<button type="submit" class="btn btn-info" name="returnButton" id="returnbtn">Return</button>
 		</div>
 		</div>
-	</form>
-	<!--to be tranfered to the start page -->
-	<?php 
-		
-	}else if (isset($_POST["returnButton"]) or isset($_POST["closeButton"]) or !isset($_SESSION["questioncount"]) or $_SERVER['REQUEST_METHOD'] === 'GET'){
-		session_unset();
-	?>
-	<div class="mainContent">
-	<div class="mainHeader">
-		<h1>Welcome, are you ready to play? </h1>
-	</div>
 	
-	<form  method="post" class="mainPageForm">
-		<button type="submit" class="btn btn-success" name="startButton">Start</button>
-	</form>
-	</div>
+	
 	<?php
+		}else if (isset($_POST["SaveButton"])){
+			if ( ! empty($_POST['nickname'])){
+				$nickname= $_POST['nickname'];
+				$finscore= $_SESSION["score"];
+				file_put_contents("scoresFile.txt",$name,$finscore,FILE_APPEND);
+				
+			}
 		}
 	?>
-
-	
-	
-
+	</form>
 
 	<div class="backToTop stickyDown">
 		<a href="#top">Top</a>
