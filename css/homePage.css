@@ -186,6 +186,12 @@ input[type=text]{
  border-radius: 4px;
 }
 
+.alert{
+
+ margin-top: 10px;
+
+}
+
 
 @media screen and (max-width: 450px) {
     .mainHeader h1 {

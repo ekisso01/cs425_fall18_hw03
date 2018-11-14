@@ -1,0 +1,66 @@
+    
+.instHeader{
+ margin-top: 5%;
+ color: white;
+ text-align: center;
+ 
+} 
+
+.partA {
+ color: white;
+ min-width: 300px;
+ max-width: 1000px;
+}
+
+
+.partB {
+ color: white;
+ min-width: 300px;
+ max-width: 1000px;
+}
+
+.partC {
+ color: white;
+ min-width: 300px;
+ max-width: 1000px;
+}
+
+.instructionsForm{
+    margin-left: 5px;
+}
+
+@media screen and (max-width: 900px) {
+    
+     .instHeader {
+       
+       margin-top: 10%;
+     }
+
+}
+
+@media screen and (max-width: 540px) {
+    
+     .instHeader {
+       
+       margin-top: 20%;
+       
+     }
+     .instHeader h1 {
+       
+       font-size: 1.5rem;
+       
+     }
+     .instructionsForm{
+	font-size: 10px;
+     }
+     .partA h4{
+	font-size: 1.5rem;
+     }
+     .partB h4{
+	font-size: 1.5rem;
+     }
+     .partC h4{
+	font-size: 1.5rem;
+     }
+
+}

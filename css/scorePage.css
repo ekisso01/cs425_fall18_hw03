@@ -1,0 +1,40 @@
+
+.scoresForm{
+ margin-top: 52px;
+ margin-left: auto;
+ margin-right: auto;
+ text-align: center;
+ color: white;
+ width: 50%;
+ border: 1px solid;
+ border-radius: 25px;
+ padding-right: 8px;
+ padding: 20px;
+ 
+    
+}
+
+.row{
+ color: white;
+
+
+}
+
+.res{
+ width:33%;
+ resize: vertical;
+
+}
+
+.scoreHeader{
+ margin-bottom: 20px;
+
+}
+
+@media screen and (max-width: 450px) {
+    
+.scoresForm{
+ width:70%;
+}
+
+}

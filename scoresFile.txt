@@ -1,0 +1,11 @@
+elena 35
+con 90
+meri 10
+hi 0
+elena2 60
+super 90
+kelepeshis 10
+con 15
+player1997 90
+christos 40
+elena3 60

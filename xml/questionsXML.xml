@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding='UTF-8'?>
+<?xml version="1.0" encoding='UTF-8'?>
 <!DOCTYPE quiz [
 	<!ELEMENT quiz (title, items)>
 	<!ELEMENT title (#PCDATA)>
@@ -219,7 +219,7 @@
 		<correct>Milan</correct>
 	</item>
 	<item>
-        	<question>What is the name of Sophie's love-interest and fiancé (Mamma mia!)?</question>
+        	<question>What is the name of Sophie's love-interest and fianc? (Mamma mia!)?</question>
         	<answer>Eddie</answer>
         	<answer>Sky</answer>
         	<answer>Sam</answer>
@@ -282,7 +282,7 @@
 		<correct>Road</correct>
 	</item>
 	<item>
-        	<question>Dominica is the capital of which country?</question>
+        	<question>Which is the capital of Dominica?</question>
         	<answer>Palikir</answer>
         	<answer>Roseau</answer>
         	<answer>Apia</answer>
@@ -291,34 +291,34 @@
 		<correct>Roseau</correct>
 	</item>
 	<item>
-        	<question>Saint Lucia is the capital of which country?</question>
+        	<question>Which is the capital of Saint Lucia?</question>
         	<answer>Port Louis</answer>
-        	<answer correct="y">Castries</answer>
         	<answer>Tarawa</answer>
         	<answer>Willemstad</answer>
+		<answer>Castries</answer>
 		<level> D </level>
 		<correct>Castries</correct>
 	</item>
 	<item>
-        	<question>Cape Verde is the capital of which country?</question>
+        	<question>Which is the capital of Cape Verde?</question>
+		<answer>Praia</answer>
         	<answer>Apia</answer>
-        	<answer>Praia</answer>
         	<answer>Male</answer>
         	<answer>Saint George's</answer>
 		<level> D </level>
 		<correct>Praia</correct>
 	</item>
 	<item>
-        	<question>Solomon Islands is the capital of which country?</question>
-        	<answer>Pago Pago</answer>
-        	<answer>Honiara</answer>
+        	<question>Which is the capital of Solomon Islands?</question>
+        	<answer>Pago Pago</answer>        	
         	<answer>Male</answer>
+		<answer>Honiara</answer>
         	<answer>Saint George's</answer>
 		<level> D </level>
 		<correct>Honiara</correct>
 	</item>
 	<item>
-        	<question>Qatar is the capital of which country?</question>
+        	<question>Which is the capital of Qatar?</question>
         	<answer>Male</answer>
         	<answer>Doha</answer>
         	<answer>Roseau</answer>
@@ -327,11 +327,11 @@
 		<correct>Doha</correct>
 	</item>
 	<item>
-        	<question>Seychelles is the capital of which country?</question>
+        	<question>Which is the capital of Seychelles?</question>
         	<answer>Praia</answer>
-        	<answer>Victoria</answer>
         	<answer>Majuro</answer>
         	<answer>Saint George's</answer>
+		<answer>Victoria</answer>
 		<level> M </level>
 		<correct>Victoria</correct>
 	</item>
@@ -470,85 +470,85 @@
 		<correct>Mercury</correct>
 	</item>
 	<item>
-        	<question>Satellite Cordelia orbits which planet?</question>
-        	<answer>Earth</answer>
-        	<answer>Uranus</answer>
-        	<answer>Neptune</answer>
-        	<answer>Pluto</answer>
+        	<question>For which country did Ruslana win Eurovision Song Contest(2004)?</question>
+        	<answer>Sweden</answer>
+        	<answer>Estonia</answer>
+        	<answer>Ukraine</answer>
+        	<answer>Latvia</answer>
 		<level> M </level>
-		<correct>Uranus</correct>
+		<correct>Ukraine</correct>
 	</item>
 	<item>
-        	<question>Satellite Enceladus orbits which planet?</question>
-        	<answer>Jupiter</answer>
-        	<answer>Saturn</answer>
-        	<answer>Neptune</answer>
-        	<answer>Pluto</answer>
+        	<question>Who had a hit with the song 'Dangerous Woman' ?</question>
+        	<answer>Lady Gaga</answer>
+        	<answer>Coldplay</answer>
+        	<answer>One Direction</answer>
+        	<answer>Ariana Grande</answer>
 		<level> D </level>
-		<correct>Saturn</correct>
+		<correct>Ariana Grande</correct>
 	</item>
 	<item>
-        	<question>Satellite Tethys orbits which planet?</question>
-        	<answer>Uranus</answer>
-        	<answer>Saturn</answer>
-        	<answer>Neptune</answer>
-        	<answer>Jupiter</answer>
+        	<question>Who recorded this album?</question>
+        	<answer>Enrique Inglesias</answer>
+        	<answer>Rihanna</answer>
+        	<answer>Jeezy</answer>
+        	<answer>Maren Morris</answer>
 		<level> M </level>
-		<correct>Saturn</correct>
+		<correct>Maren Morris</correct>
 	</item>
 	<item>
-        	<question>Satellite Mimas orbits which planet?</question>
-        	<answer>Jupiter</answer>
-        	<answer>Saturn</answer>
-        	<answer>Neptune</answer>
-        	<answer>Uranus</answer>
+        	<question>Who had a hit with the song 'Russian Roulette'?</question>
+        	<answer>Rihanna</answer>
+        	<answer>K'naan</answer>
+        	<answer>Jason Derulo</answer>
+        	<answer>Britney Spears</answer>
 		<level> D </level>
-		<correct>Saturn</correct>
+		<correct>Rihanna</correct>
 	</item>
 	<item>
-        	<question>Satellite Deimos orbits which planet?</question>
-        	<answer>Jupiter</answer>
-        	<answer>Mars</answer>
-        	<answer>Mercury</answer>
-        	<answer>Venus</answer>
+        	<question>Who had a hit with the song 'Club can't handle me'?</question>
+        	<answer>Flo Rida ft David Guetta</answer>
+        	<answer>Katty Perry ft Snoop Dogg</answer>
+        	<answer>Justin Bieber ft Ludacris</answer>
+        	<answer>La Roux</answer>
 		<level> M </level>
-		<correct>Mars</correct>
+		<correct>Flo Rida ft David Guetta</correct>
 	</item>
 	<item>
-        	<question>Satellite Dione orbits which planet?</question>
-        	<answer>Jupiter</answer>
-        	<answer>Saturn</answer>
-        	<answer>Neptune</answer>
-        	<answer>Uranus</answer>
+        	<question>Who had a hit with the song 'Middle'?</question>
+        	<answer>Flume</answer>
+        	<answer>Beyonce</answer>
+        	<answer>Bryson Tiller</answer>
+        	<answer>DJ Snake</answer>
 		<level> D </level>
-		<correct>Saturn</correct>
+		<correct>DJ Snake</correct>
 	</item>
 	<item>
-        	<question>Satellite Rhea orbits which planet?</question>
-        	<answer>Jupiter</answer>
-        	<answer>Saturn</answer>
-        	<answer>Neptune</answer>
-        	<answer>Uranus</answer>
+        	<question>Who had a hit with the song 'Christmas Lights'?</question>
+        	<answer>Nickelback</answer>
+        	<answer>Coldplay</answer>
+        	<answer>3oh! ft Kesha</answer>
+        	<answer>Rihanna ft Young Jeezy</answer>
 		<level> D </level>
-		<correct>Saturn</correct>
+		<correct>Coldplay</correct>
 	</item>
 	<item>
-        	<question>Satellite Telesto orbits which planet?</question>
-        	<answer>Jupiter</answer>
-        	<answer>Saturn</answer>
-        	<answer>Neptune</answer>
-        	<answer>Uranus</answer>
+        	<question>Who had a hit with the song 'Treasure'?</question>
+        	<answer>Jason Derulo</answer>
+        	<answer>Imagine Dragons</answer>
+        	<answer>Ciara</answer>
+        	<answer>Bruno Mars</answer>
 		<level> D </level>
-		<correct>Saturn</correct>
+		<correct>Bruno Mars</correct>
 	</item>
 	<item>
-        	<question>Satellite Nereid orbits which planet?</question>
-        	<answer>Jupiter</answer>
-        	<answer>Neptune</answer>
-        	<answer>Saturn</answer>
-        	<answer>Uranus</answer>
+        	<question>Who had a hit with the song 'Talk That Talk'?</question>
+        	<answer>Mumford and Sons</answer>
+        	<answer>Rihanna</answer>
+        	<answer>Lady Gaga</answer>
+        	<answer>Cee Lo Green</answer>
 		<level> M </level>
-		<correct>Neptune</correct>
+		<correct>Rihanna</correct>
 	</item>
 	<item>
         	<question>Who is the main antagonist of 'Alice in Wonderland'?</question>
@@ -641,13 +641,13 @@
 		<correct>Robert Downey Jr.</correct>
 	</item>
 	<item>
-        	<question>Who played Superman in a superhero movie?</question>
-        	<answer>Alfred Molina</answer>
-        	<answer>Christopher Reeve</answer>
-        	<answer>Gene Hackman</answer>
-        	<answer>Edward Norton</answer>
+        	<question>Who had a hit with the song 'DJ Got Us Falling In Love'?</question>
+        	<answer>Katy Perry</answer>
+        	<answer>Bruno Mars</answer>
+        	<answer>Justin Bieber</answer>
+        	<answer>Usher ft Pitbull</answer>
 		<level> D </level>
-		<correct>Christopher Reeve</correct>
+		<correct>Usher ft Pitbull</correct>
 	</item>
 	<item>
         	<question>Who played Daredevil in a superhero movie?</question>
@@ -677,13 +677,13 @@
 		<correct>Famke Janssen</correct>
 	</item>
 	<item>
-        	<question>Who played Betty Ross in a superhero movie?</question>
-        	<answer>Jennifer Garner</answer>
-        	<answer>Jennifer Connelly</answer>
-        	<answer>Kirsten Dunst</answer>
-        	<answer>Anna Paquin</answer>
+        	<question>Who had a hit with the song 'Stay'?</question>
+        	<answer>Rihanna and Mikky Ekko</answer>
+        	<answer>Maroon 5</answer>
+        	<answer>Justin Bieber</answer>
+        	<answer>Bruno Mars</answer>
 		<level> D </level>
-		<correct>Jennifer Connelly</correct>
+		<correct>Rihanna and Mikky Ekko</correct>
 	</item>
 	<item>
         	<question>Who played Batman in a superhero movie?</question>

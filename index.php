@@ -105,8 +105,9 @@
 			}
 				
 			$i=rand(0,80);
-			while ($xml->item[$i]->level != $level){
+			while ($xml->item[$i]->level != $level or in_array($xml->item[$i]->question, $_SESSION["fquestions"])){
 				$i=rand(0,80);
+				
 			}
 			$_SESSION["prevQuestion"]=$i;
 			array_push($_SESSION["fquestions"],(string) $xml->item[$i]->question);
@@ -196,9 +197,12 @@
 	</div>
 	
 
-	<!-- to be transfer to the page of the current score --> 
+	
 	<?php 
-		}else if($_SESSION["questioncount"]>5){
+		
+	
+
+	}else if($_SESSION["questioncount"]>5){
 
 			$xml = simplexml_load_file('xml/questionsXML.xml');
 
@@ -304,17 +308,48 @@
 		</div>
 		</div>
 	
-	
+	<!-- to be transfer to the page of the current score --> 
 	<?php
-		}else if (isset($_POST["SaveButton"])){
-			if ( ! empty($_POST['nickname'])){
-				$nickname= $_POST['nickname'];
-				$finscore= $_SESSION["score"];
-				file_put_contents("scoresFile.txt",$name,$finscore,FILE_APPEND);
-				
-			}
-		}
+		
+
+	if (isset($_POST["SaveButton"])){
+		$nickname=$_REQUEST["nickname"];
+		$score=$_SESSION["score"];
+		$stringData=$nickname ." ". $score ."\r\n";
+
+		if (strcmp($nickname,"") !=0){
+		 $myFile = "scoresFile.txt";
+		 $temp = fopen($myFile, 'a') or die("Can't open file") ;
+
+		 if (fwrite($temp,$stringData)){
+		 	fclose($temp);
+			?>
+			<div class="alert alert-success" role="alert">
+  			Succesfully saved your score!
+			</div>
+			<meta http-equiv="refresh" content="2;url=https://www.cs.ucy.ac.cy/~ekisso01/cs425_fall18_hw03/index.php" />
+		<?php
+		 }
+		 else{ 
+		  ?>
+			<div class="alert alert-danger" role="alert">
+  			Error while saving your score!
+			</div>
+		<?php
+		 }
+		}else{
+			?>
+			<div class="alert alert-danger" role="alert">
+  			You must write a nickname!
+			</div>
+		<?php
+		}    
+	}
+	}
+		
+			
 	?>
+
 	</form>
 
 	<div class="backToTop stickyDown">
