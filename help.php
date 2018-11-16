@@ -5,9 +5,9 @@
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <meta name="author" content="Kissopoda Elena">
- <meta name="description" content="Home Page">
+ <meta name="description" content="Help Page gives information about the game and basic instructions about the way you can play">
  <meta http-equiv="X-UA-Compatible" content="ie=edge">
- <meta name="keywords" content="CS425, HTML, Quiz game, question game">
+ <meta name="keywords" content="CS425, HTML, Quiz game, question game, help">
 		
  <!-- Add icon library -->
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">

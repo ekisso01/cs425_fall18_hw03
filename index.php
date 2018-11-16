@@ -8,7 +8,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="Kissopoda Elena">
-	<meta name="description" content="Home Page">
+	<meta name="description" content="In Home page the user can play the quiz game, and choose if he wants to save his score or not and return to the start">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="keywords" content="CS425, HTML, Quiz game, question game">
 		
@@ -259,7 +259,7 @@
 				<label>Nickname :</label>
 			</div>
 	  	<div class="col-75">
-			<input type="text" name="nickname" id="generaltxt" placeholder=" Your nickname.." autofocus>
+			<input type="text" name="nickname" id="generaltxt" placeholder=" Your nickname.." maxlength="15" autofocus>
 		</div>
 		</div>
 		<br>
