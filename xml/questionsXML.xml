@@ -188,7 +188,7 @@
         	<answer>New Mexico</answer>
         	<answer>Nevada</answer>
         	<answer>Texas</answer>
-		<level> E </level>
+		<level> D </level>
 		<correct>New Mexico</correct>
 	</item>
 	<item>
@@ -197,7 +197,7 @@
         	<answer>Florence</answer>
         	<answer>Naples</answer>
         	<answer>Milan</answer>
-		<level> E </level>
+		<level> D </level>
 		<correct>Florence</correct>
 	</item>
 	<item>
@@ -488,7 +488,7 @@
 		<correct>Ariana Grande</correct>
 	</item>
 	<item>
-        	<question>Who recorded this album?</question>
+        	<question>Who recorded the album 'Hero'?</question>
         	<answer>Enrique Inglesias</answer>
         	<answer>Rihanna</answer>
         	<answer>Jeezy</answer>
@@ -646,7 +646,7 @@
         	<answer>Bruno Mars</answer>
         	<answer>Justin Bieber</answer>
         	<answer>Usher ft Pitbull</answer>
-		<level> D </level>
+		<level> E </level>
 		<correct>Usher ft Pitbull</correct>
 	</item>
 	<item>
@@ -682,7 +682,7 @@
         	<answer>Maroon 5</answer>
         	<answer>Justin Bieber</answer>
         	<answer>Bruno Mars</answer>
-		<level> D </level>
+		<level> E </level>
 		<correct>Rihanna and Mikky Ekko</correct>
 	</item>
 	<item>
