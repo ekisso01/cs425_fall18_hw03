@@ -51,7 +51,7 @@
 
 <div class="partC">
  <h4>Score board</h4>
- <p>To see the score board, press on the "High Scores" tab at the header of the page. The score board is showing the players with the highest scores in descending order.</p>
+ <p>To see the score board, press on the "High Scores" tab at the header of the page. The score board is showing the players with the highest scores in descending order (TOP10).</p>
 </div>
 </form>
 
